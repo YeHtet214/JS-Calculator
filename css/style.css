@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#calculator {
+  font-family: digital;
+  background-color: #9451AE;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  width: 50%;
+  border: 4px solid;
+  border-radius: 3px;
+}
+
+@media (max-width: 765px) {
+  .container {
+    width: 80%;
+  }
+}
+
+.container .result-board {
+  background-color: #111;
+  color: #AE9451;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: right;
+  padding: .5rem 1rem .5rem .5rem;
+  min-height: 4rem;
+  overflow: hidden;
+}
+
+.container .result-board #history {
+  padding-bottom: 1rem;
+}
+
+.container #calculation-part {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'AC AC divide _multiply' 'seven eight nine _subtract' 'four five six plus' 'one two three equals' '_zero _zero _decimal equals';
+  overflow: hidden;
+  background-color: #AE9451;
+}
+
+.container #calculation-part div {
+  background-color: #333;
+  color: #AE9451;
+  padding: 1rem 1.5rem;
+  font-size: 1.3rem;
+  -webkit-box-shadow: inset 0 0 1px #f5f5f52a;
+          box-shadow: inset 0 0 1px #f5f5f52a;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  border-radius: 1px;
+}
+
+.container #calculation-part div:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: inset 0 0 1px #f5f5f5;
+          box-shadow: inset 0 0 1px #f5f5f5;
+}
+
+.container #calculation-part #AC {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: AC;
+  background-color: #9451AE;
+  color: #111;
+}
+
+.container #calculation-part #one {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+
+.container #calculation-part #two {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: two;
+}
+
+.container #calculation-part #three {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: three;
+}
+
+.container #calculation-part #four {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: four;
+}
+
+.container #calculation-part #five {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: five;
+}
+
+.container #calculation-part #six {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: six;
+}
+
+.container #calculation-part #seven {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: seven;
+}
+
+.container #calculation-part #eight {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: eight;
+}
+
+.container #calculation-part #nine {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: nine;
+}
+
+.container #calculation-part #zero {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: _zero;
+}
+
+.container #calculation-part #plus {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: plus;
+}
+
+.container #calculation-part #multiply {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: _multiply;
+}
+
+.container #calculation-part #subtract {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: _subtract;
+}
+
+.container #calculation-part #divide {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: divide;
+}
+
+.container #calculation-part #decimal {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: _decimal;
+}
+
+.container #calculation-part #equals {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: equals;
+  color: #9451AE;
+  background-color: #51AE94;
+}
